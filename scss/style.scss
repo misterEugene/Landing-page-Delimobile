@@ -1,0 +1,2000 @@
+@import "fonts";
+
+$fontText: 'HelveticaNeueCyr';
+$fontTitle: 'Floripa';
+$colorOne: #65E1BA;
+$colorOneDark: #51D4B5;
+$colorTwo: #000907;
+$colorThree: #F2F2F2;
+$colorToningFooter: #5FEABE;
+$fontSizeMainTitleBlock: 48px;
+$fontSizeMainTitleBlock-1280px: 36px;
+$fontSizeMainTitleBlock-1000px: 32px;
+$fontSizeMainTitleBlock-768px: 22px;
+$fontSizeMainTitleBlock-480px: 20px;
+$fontSizeText: 16px;
+
+
+
+.title {
+    font-family: 'Floripa';
+    font-weight: 400;
+    font-size: $fontSizeMainTitleBlock;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: $colorTwo;
+    transition: all 0.3s;
+}
+
+.pic {
+    max-width: 100%;
+}
+
+a:hover {
+    color: $colorThree;
+}
+
+button {
+    border-radius: 0;
+    transition: all 0.3s;
+    background-color: $colorThree;
+    cursor: pointer;
+}
+
+button:hover {
+    color: $colorThree;
+    background-color: $colorThree;
+}
+
+li {
+    list-style-type: none;
+}
+
+input {
+    outline:none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $colorThree;    
+    color: $colorTwo;
+    box-sizing: border-box;
+    font-family: $fontText;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.circle {
+    width: 214px;
+    height: 214px;
+    border: 1px solid $colorOne;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;     
+}
+
+
+// Header styles start
+
+.header {
+    transition: 0.3s;
+    position: fixed;
+    z-index: 10;
+    padding-top: 32px;
+    width: 100%;
+
+    &__wrapper {
+        max-width: 1500px;
+        margin: 0 auto;
+    }
+
+    &__menu {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    &__container {
+        padding-bottom: 20.5px;
+        border-bottom: 2px solid $colorOne;
+    }
+
+    .menu__close {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 22px;
+        right: 20px;
+        cursor: pointer;
+        display: none;
+        
+
+        &:hover {
+            span {
+                background-color: $colorThree;
+                transition: all 0.5s;
+            }
+        }
+
+        span {
+            transition: all 0.3s;
+            width: 100%;
+            height: 4px;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            background-color: $colorOne;
+            transform: translate(0, -50%);
+
+            &:last-child {
+                transform: rotate(45deg);
+            }
+
+            &:first-child {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    .burger {
+        width: 40px;
+        height: 33px;
+        position: relative;
+        display: none;
+        
+
+        &:hover {
+            cursor: pointer;
+            span {
+                background-color: $colorThree;
+                transition: all 0.5s;
+            }
+        }
+
+        span {
+            transition: all 0.3s;
+            display: inline-block;
+            height: 4px;
+            width: 100%;
+            background-color: $colorOne;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(0, -50%);
+
+            &:last-child {
+                top: 100%;
+                transform: translate(0, -100%);
+            }
+
+            &:first-child {
+                top: 0;
+                transform: translate(0, 0);
+            }
+        }
+
+        
+    }
+
+    .menu {
+        display: flex;
+        flex-wrap: nowrap;
+
+
+        &__item {
+            font-weight: 400;
+            font-size: 12px;
+            letter-spacing: 1px;
+            color: $colorThree;
+            border: 2px solid $colorOne;
+            padding: 8px 12px;
+            border-radius: 32px;
+            margin-right: 16px;
+            transition: all 0.3s;
+
+            a {
+                color: $colorThree;
+            }
+        }
+
+        &__item:hover, &__item:active {
+            color: #060000;
+            background-color: $colorOne;
+            cursor: pointer;
+
+            a {
+                color: #060000;
+            }
+        }
+
+        &__item:last-child{
+            margin-right: 0;
+        }
+    }
+
+    &__title {
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 1;
+        color: $colorOne;
+    }
+
+}
+
+.header_active {
+    background-color: rgba(0,0,0,0.5);
+
+    .header__container {
+        border: none;
+    }
+}
+
+
+// Header styles end
+
+
+
+// Intro styles stert
+
+.intro {
+    padding: 219px 0 82px 0;
+    background: url('@img/intro-fon.jpg') center / cover no-repeat;
+    position: relative;
+    text-align: center;
+    margin-bottom: 140px;
+    
+
+    &__container {
+        position: relative;
+        z-index: 2;
+    }
+
+    &__title {
+        font-weight: 400;
+        max-width: 876px;
+        margin: 0 auto;
+        font-size: 60px;
+        line-height: 1.5;
+        color: $colorOne;
+        margin-bottom: 43px;
+    }
+
+    &__subtitle {
+        max-width: 314px;
+        margin: 0 auto;
+        color: $colorThree;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 160%;
+        margin-bottom: 11px;
+    }
+
+    &__button {
+        font-weight: 550;
+        font-size: 16px;
+        line-height: 16px;
+        margin: 0 auto;
+        background-color: $colorOne;
+        display: inline-block;
+        border: none;
+        padding: 8px 54px;
+        border-radius: 22px;
+        border: 1px solid transparent;
+        transition: all 0.3s;
+        cursor: pointer;
+        
+
+        &:hover, &:active {
+            background-color: transparent;
+            color: $colorThree;
+            border: 1px solid $colorOne;     
+        }
+    }
+
+    .gradient {
+        background-color: #000C0B;
+        opacity: .7;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+// Intro styles end
+
+// About styles start
+
+.about {
+    padding-bottom: 137px;
+
+    &__container {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+
+    &__title {
+        font-size: 48px;
+        min-width: 315px;
+        font-weight: 400;
+        margin-bottom: 40px;
+    }
+
+    &__bottom-row {
+        display: flex;
+    }
+
+    &__column-left {
+        border-top: 2px solid $colorTwo;
+        margin-right: 110px;
+        padding: 40px 0 21px 0;
+        border-bottom: 2px solid $colorOne;
+    }
+
+    .number-one {
+        font-size: 16px;
+        line-height: 145%;
+        margin-bottom: 80px;
+    }
+
+    &__description {
+        font-size: 16px;
+        line-height: 160%;
+        margin-bottom: 345px;
+    }
+
+    .learn-more {
+        text-align: right;
+        font-size: 16px;
+        line-height: 160%;
+        padding-right: 24px;
+        position: relative;
+        display: inline-block;
+        float: right;
+        transition: all 0.3s;
+
+        &:hover {
+            cursor: pointer;
+            color: $colorOne;
+
+            .about__arrow-img {
+                top: -5px;
+                right: -5px;
+            }
+        }
+    }
+
+    &__arrow-img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transition: all .5s;
+    }
+
+    &-pic {
+       
+    }
+
+    &__img{
+        width: 490px;
+        height: 100%;
+        position: relative;
+        padding-bottom: 3px;
+        z-index: 1;
+    }
+
+    &__pic {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__img::after {
+        content: '';
+        position: absolute;
+        background: $colorOne;
+        bottom: 3px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.2;
+        z-index: 1;
+    }
+
+}
+
+// About styles end
+
+// Achievement styles start
+
+.achievement {
+    padding: 140px 0 ;
+    background-color: $colorOne;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__row-top {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        margin-bottom: 117px;
+    }
+
+
+    &__title {
+        font-weight: 400;
+        max-width: 700px;
+        font-size: 48px;
+        line-height: 48px;
+    }
+
+    &__column {
+        transition: all 0.3s ;
+    }
+
+    .circles {
+        display: flex;
+
+        .circle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 1px solid $colorTwo;
+            position: relative;
+            cursor: pointer;
+
+        }
+    }
+
+
+
+    &__arrow-img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.3s ;
+    }
+
+    .prev:hover{
+        .achievement__arrow-img {
+            margin-left: -6px;
+        }
+    }
+
+    .circle:first-child {
+        margin-right: 22px;
+    }
+
+    .next:hover{
+        .achievement__arrow-img {
+            margin-left: 6px;
+        }
+    }
+
+    &__row-bottom {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+        text-align: center;
+    }
+
+    &__column {
+        margin-bottom: 30px;
+    }
+
+    .column__title {
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 36px;
+        cursor: pointer;
+        padding-bottom: 28px;
+    }
+
+    .column__subtitle {
+        margin: 0 auto;
+        cursor: pointer;
+        width: 280px;
+        font-size: 20px;
+        line-height: 140%;
+    }
+}
+
+// Achievement styles end
+
+// Use styles start
+
+.use {
+    padding: 140px 0;
+
+    &__title {
+        font-size: 48px;
+        line-height: 48px;
+        position: relative;
+        padding-right: 87px;
+        width: 780px;
+    }
+
+    &__arrow-img {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    &__header {
+        align-items: flex-end;
+        margin-bottom: 107px;
+    }
+
+    &__column {
+        display: flex;
+        justify-content: end;
+    }
+
+    &__list {
+        list-style: none;
+        width: 713px;
+    }
+
+    .use__item {
+        border-top: 2px solid $colorOne;
+        line-height: 160%;
+        box-sizing: border-box;
+        padding: 25px 0 14px;
+        display: flex;
+        justify-content: space-between;
+        min-height: 95px;
+        align-items: center;
+        text-transform: uppercase;
+    }
+
+    .use__item:last-child {
+        border-bottom: 2px solid $colorOne;
+    }
+
+    .item__title {
+        font-size: 36px;
+        line-height: 36px;
+        margin-right: 250px;
+    }
+
+    .item__text {
+        text-align: right;
+        line-height: 160%;
+    }
+
+    
+
+    .arrow {
+        transform: translate(0, -50%) rotate(90deg);
+        margin-left: 57px;
+        width: 30px;
+        height: 30px;
+        top: 0;
+        right: 0;
+    
+        .line-all {
+            background: $colorOne;
+            border-radius: 2px;
+            position: absolute;
+            height: 5px;
+            border-radius: 0;
+        }
+    
+        &__line-1 {    
+            top: 0;
+            left: 1px;
+            width: 30px;
+        }
+        &__line-2 {
+            top: 50%;
+            left: 50%;
+            width: 30px;
+            transform: rotate(90deg); 
+        }
+        &__line-3 {
+            bottom: 40%;
+            left: 50%;
+            width: 42px;
+            transform: translate(-50%, 50%) rotate(-45deg);
+        }
+    }
+
+
+}
+
+// Use styles end
+
+
+// Go styles start 
+
+.go {
+    background-color:  $colorOne;
+    padding: 140px 0 90px;
+
+    &__word {
+        font-size: 16px;
+        line-height: 145%;
+        margin-bottom: 28px;
+    }
+
+    &__title {
+        font-weight: 550;
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    &__arrow-pic {
+        width: 33px;
+        height: 33px;
+        transition: all .3s;
+    }
+
+    &__begin {
+        padding-bottom: 15px;
+        border-bottom: 5px solid $colorTwo;
+        display: flex;
+        justify-content: space-between;
+
+        &:hover {
+            .go__arrow-pic {
+                margin-top: -5px;
+                margin-right: -5px;
+            }
+        }
+    }
+
+   
+}
+
+// Go styles end
+
+// Autopark styles start 
+
+.autopark {
+    padding: 140px 0 0;
+    margin-bottom: 140px;
+
+    &__title {
+        font-size: 48px;
+        line-height: 48px;
+        margin-bottom: 90px;
+    }
+
+    &__body {
+        margin-bottom: 165px;
+    }
+
+    &__line {
+        height: 2px;
+        background-color: $colorTwo;
+        display: flex;
+        
+
+        .car-line {
+            flex: 0 0 25%;
+        }
+    }
+
+    .cars {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .car {
+        width: 25%;
+        border: 2px solid $colorTwo;
+        border-right: none;
+        display: flex;
+        background-color: $colorThree;
+        flex-direction: column;
+        transition: all .3s;
+    }
+
+    .car:hover {
+        transform: scale(1.15);
+        border-right: 2px solid $colorTwo;
+        position: relative;
+        z-index: 1;
+    }
+
+    .car:last-child {
+        border-right: 2px solid $colorTwo;
+    }
+
+    .car__title {
+        position: absolute;
+        top: 22px;
+        left: 22px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 16px;
+    }
+
+    .car__img {
+        width: 90%;
+    }
+
+    .car__pic {
+        width: 100%;
+        height: auto;
+    }
+
+    .car__top {
+        flex: 1 0 191px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        position: relative;
+    }
+
+    .car__bottom {
+        padding: 37px 42px;
+        background-color: $colorOne;
+    }
+
+    .car__container {
+        background-color: #fff;
+        text-align: center;
+        padding: 15px 10px 23px;         
+    }
+
+    .car__rate {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 140%;  
+    }
+
+    .car__text {
+        font-size: 12px;
+        line-height: 160%;
+        margin-bottom: 33px;
+    }
+
+    .btn {
+        padding: 3px 0px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+
+    .btn-rate {
+        background-color: $colorOne;
+        font-size: 12px;
+        line-height: 160%;
+        padding: 3px 0;
+    }
+
+
+}
+
+// Autopark styles end
+
+// Ticket styles start 
+.ticket {
+    margin-bottom: 140px;
+
+    &__container {
+        padding: 0 0 0 203px;
+    }
+
+    &__title {
+        font-size: 48px;
+        line-height: 48px;
+    }
+
+    &__img {
+        width: 489px;
+        height: 398px;
+    }
+
+    &__top {
+        margin-bottom: 108px;
+    }
+
+    &__bottom {
+        display: flex;
+    }
+
+    &__column-left {
+        margin-right: 40px;
+    }
+
+    &__text {
+        line-height: 145%;
+
+        p {
+            margin-bottom: 36px;
+
+            &:last-child{
+                margin-bottom: 72px;
+            }
+        }
+    }
+
+    &__circle {
+        margin-left: 106px;
+    }
+
+    &__learn-more {
+        cursor: pointer;
+        width: 180px;
+        height: 180px;
+        background-color: $colorOne;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s;
+
+        a {
+            text-decoration: none;
+            color: $colorTwo;
+            font-size: 16px;
+            line-height: 140%;
+        }
+
+        &:hover {
+            width: 100%;
+            height: 100%;
+
+            a {
+                color: $colorThree
+            }
+        }
+
+
+    }
+}
+// Ticket styles end
+
+// franchise styles start
+
+.franchise {
+    padding-top: 140px;
+    margin-bottom: 140px;
+
+    &__title {
+        padding: 3px 0 0 0;
+        font-size: 48px;
+        line-height: 120%;
+        position: relative;
+        margin-bottom: 50px;
+    }
+
+    &__word {
+        position: absolute;
+        top: 47px;
+        left: -100px;
+        font-family: 'HelveticaNeueCyr';
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 120%;
+        color: $colorOne;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        transform: rotate(-90deg);
+    }
+
+    &__subtitle {
+        font-size: 24px;
+        line-height: 140%;
+        font-weight: 400;
+        margin-bottom: 36px;
+    }
+
+    &__form {
+        display: flex;
+    }
+
+    &__input {
+        border: none;
+        background-color: $colorOne;
+        width: 458px;
+        height: 80px;
+        padding-left: 30px;
+        font-size: 16px;
+        line-height: 145%;
+
+        &::placeholder {
+            color: $colorTwo;
+        }
+    }
+
+    &__btn {
+        height: 80px;
+        width: 224px;
+        font-size: 16px;
+        line-height: 145%;
+        border: none;
+        background-color: $colorOneDark;
+
+        &:hover {
+            background-color: $colorOneDark; 
+        }
+    }
+}
+
+// franchise styles end
+
+// Answer-on-question  styles start
+.answer-on-question {
+    padding: 0 100px 131px 0;
+
+    .answer__header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 27px;
+    }
+
+    a:hover {
+        color: $colorOne;
+    }
+
+    .answer__title {
+        font-size: 32px;
+        line-height: 32px;
+        margin-right: 15px;
+    }
+
+    &__title {
+        font-size: 48px;
+        line-height: 48px;
+        letter-spacing: -0.03em;
+        margin-bottom: 60px;
+    }
+
+    .list-question__item {
+        padding: 40px 20px 40px 0;
+        border-top: 2px solid $colorOne;
+
+        &:last-child {
+            border-bottom: 2px solid $colorOne;
+        }
+    }
+
+    .answer__cross {
+        width: 21px;
+        height: 21px;
+        position: relative;
+        margin-top: 5px;
+        z-index: 4;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        .cross {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(0, -50%) rotate(0deg);
+            width: 21px;
+            display: inline-block;
+            height: 2px;
+            background-color: $colorTwo;
+            z-index: -1;
+        }
+
+        .cross-1 {
+            border-radius: 2px 0 0 2px;
+        }
+
+        .cross-2 {
+            transform: translate(0, -50%) rotate(90deg);
+        }
+
+
+    }
+
+    .answer-list {
+        opacity: 0;
+        transition: all .6s ease;
+        li {
+            padding-left: 26px;
+            font-size: 22px;
+            line-height: 163.5%;
+            position: relative;
+
+            &:before {
+                content: '';
+                width: 13px;
+                height: 13px;
+                background-color: $colorOne;
+                border-radius: 50%;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translate(0, -50%);
+            }
+        }
+    }
+
+    .js-list-animat-open.answer-list {
+        opacity: 1;
+        display: block;
+    }
+
+    .js-list-animat-close.answer-list {
+        opacity: 0;
+    }
+
+    .js-list {
+        display: none;
+    }
+
+    .js-cross {
+        transform: rotate(45deg);
+
+        .cross {
+            background-color: $colorOne;
+        }
+
+        .cross-1 {
+            border-radius: 0;
+        }
+    }
+}
+// Answer-on-question styles end
+
+// Team styles start
+.team {
+        margin-bottom: 140px;
+        text-align: center;
+
+        &__title {
+            font-size: 40px;
+            line-height: 150%;
+            margin-bottom: 80px;
+        }
+
+        &__input {
+            width: 100%;
+            height: 78px;
+            border: none;
+            background-color: $colorThree;
+            border-top: 2px solid $colorOne;
+            border-bottom: 2px solid $colorOne;
+            margin-bottom: 65px;
+            text-align: center;
+            font-size: 24px;
+            line-height: 140%;
+
+            &::placeholder {
+                font-size: 24px;
+                line-height: 140%;
+                color: $colorTwo;
+                text-align: center;
+            }
+        }
+
+        &__form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__circle {
+            outline: none;
+
+            span {
+                display: inline-block;
+                width: 184px;
+                height: 184px;
+                border-radius: 50%;
+                background-color: $colorOne;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 24px;
+                line-height: 140%;
+                transition: all 0.3s;
+
+                &:hover {
+                    width: 214px;
+                    height: 214px;
+                    color: $colorThree;
+                }
+            }
+        }
+}
+// Team styles end
+
+// Footer styles start
+.footer {
+    background: url('@img/footer-fon.jpg') center 0 / cover no-repeat ;
+    position: relative;
+    padding: 150px 0 126px 0;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $colorToningFooter;
+        mix-blend-mode: multiply;
+    }
+
+    &__container {
+        border-top: 1px solid $colorTwo;
+        padding-top: 37px;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        z-index: 10;
+    }
+
+    &__wrapper {
+        max-width: 996px;
+        margin: 0 auto;
+    }
+
+    &__title {
+        font-size: 16px;
+        line-height: 140%;
+        text-transform: uppercase;
+        margin-bottom: 133px;
+    }
+
+    &__subtitle {
+        font-size: 16px;
+        line-height: 145%;
+        font-weight: 400;
+        margin-bottom: 32px;
+    }
+
+    &__input {
+        border: none;
+        background: transparent;
+        padding-bottom: 11px;
+        border-bottom: 1px solid $colorTwo;
+        width: 100%;
+        padding-top: 10px;
+        font-size: 16px;
+        line-height: 145%;
+
+
+        &::placeholder {
+            font-size: 16px;
+            line-height: 145%;
+            color: $colorTwo;
+        }
+    }
+
+    &__column-right {
+        text-align: right;
+    }
+
+    &__nav {
+        display: flex;
+        margin-bottom: 132px;
+    }
+
+    &__menu-left {
+        text-align: left;
+        margin-right: 100px;
+    }
+
+    &__item {
+        font-size: 16px;
+        line-height: 145%;
+        margin-bottom: 13px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__text {
+        font-size: 12px;
+        line-height: 12px;
+    }
+
+    .message-link {
+        margin-right: 10px;
+
+        &:last-child {
+            margin-right: 0px;
+        }
+    }
+
+    &__form {
+        position: relative;
+        width: 280px;
+    }
+
+    &__arrow-img {
+        height: 12px;
+        width: 12px;
+        position: absolute;
+        top: 12px;
+        right: 5px;
+    }
+}
+// Footer styles end
+
+// Media start
+
+@media screen and (max-width: 1550px) {
+    .wrapper {
+        padding: 0 20px;
+    }
+
+    .footer {
+        &__wrapper {
+            padding: 0 20px;
+        }
+    }
+
+    .header {
+        &__wrapper {
+            padding: 0 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .header {
+        &__title {
+            font-size: 28px;
+        }
+    }
+
+    .title {
+        font-size: $fontSizeMainTitleBlock-1280px;
+    }
+
+    .franchise {
+        &__title {
+            padding: 3px 0 0 33px;
+        }
+
+        &__word {
+            left: -50px;
+        }
+    }
+
+    .ticket {   
+        &__container {
+            padding: 0;
+        }
+    }
+
+    .autopark {
+        .car__bottom {
+            padding: 27px 30px;
+        }
+    }
+    
+
+}
+
+@media screen and (max-width: 1100px) {
+    .header {
+
+        &__menu {
+            flex-direction: row-reverse;
+            
+        }
+
+        &__title {
+            font-size: 28px;
+            width: 100%;
+            text-align: left;
+        }
+
+        .burger {
+            display: block;
+        }
+
+        .menu__close {
+            display: block;
+        }
+
+        .menu {
+            display: none;
+        }
+
+        .menu {
+            display: block;
+            position: absolute;
+            width: 50%;
+            top: 0;
+            height: 100vh;
+            background-color: rgba(0,0,0, 0.4);
+            padding-top: 100px;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            transition: all .5s;
+        }
+
+        .menu-right {
+            right: -100%;
+            align-items: flex-start;
+            padding-left: 20px;
+        }
+
+        .menu-left {
+            left: -100%;
+            align-items: flex-end;
+            padding-right: 20px;
+        }
+
+        .menu-active.menu-right {
+            right: 0;
+        }
+
+        .menu-active.menu-left {
+            left: 0;
+        }
+
+        .menu__item {
+            text-align: center;
+            padding: 15px 25px;
+            font-size: 16px;
+            width: 100px;
+            margin-right: 0;
+            margin: 0 0 40px 0;
+        }
+    }
+
+    .autopark {
+        
+        .cars {
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .car {
+            width: 48%;
+            border-right: 2px solid $colorTwo;
+
+            &:nth-child(n):nth-child(-n+2){
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    .about {
+        &__column-left {
+            margin-right: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .footer {
+        padding: 90px 0;
+    }
+
+    .title {
+        font-size: $fontSizeMainTitleBlock-1000px;
+    }
+
+    .intro {
+        margin-bottom: 90px;
+        &__title {
+            font-size: $fontSizeMainTitleBlock-1280px;
+        }
+    }
+
+    .go {
+        &__title {
+            font-size: $fontSizeMainTitleBlock-1000px;
+        }
+    }
+
+    .circle {
+        width: 200px;
+        height: 200px; 
+    }
+
+    .header {
+        &__title {
+            font-size: 26px;
+        }
+    }
+
+    .team {
+        margin-bottom: 90px;
+
+        &__title {
+            font-size: 36px;
+        }
+
+        &__circle {
+            span {
+                width: 170px;
+                height: 170px;
+
+                &:hover {
+                    width: 200px;
+                    height: 200px;
+                }
+                
+            }
+        }
+    }
+
+    .franchise {
+        &__title {
+            padding: 3px 0 0 0px;
+            font-size: $fontSizeMainTitleBlock-1000px;
+        }
+
+        &__word {
+            left: 50%;
+            top: -35px;
+            transform: translate(-50%, 0) rotate(0deg);
+        }
+    }
+
+    .ticket { 
+        margin-bottom: 90px;
+        text-align: center;
+        
+        &__bottom {
+            flex-direction: column;
+        }
+
+        &__learn-more {
+            width: 166px;
+            height: 166px;
+        }
+
+        &__img {
+            height: auto;
+            width: 100%;
+        }
+
+        &__text {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        &__column-left {
+            margin-right: 0;
+            margin-bottom: 30px;
+        }
+
+        &__column-right {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__circle {
+            justify-content: center;
+            margin: 0;
+        }
+    }
+
+    .autopark {
+        margin-bottom: 90px;
+        padding-top: 90px;
+
+        &__title {
+            margin-bottom: 150px;
+        }
+
+        &__body {
+            margin-bottom: 110px;
+        }
+    }
+
+    .use {
+        padding: 90px 0;
+
+        &__title {
+            width: 100%;
+            padding: 0;
+        }
+
+        &__list {
+            width: 100%;
+        }
+
+        &__item {
+            justify-content: space-between;
+        }
+
+        
+    }
+
+    .achievement {
+        padding: 90px 0;
+
+        .circles {
+            margin: 0 auto;
+        }
+
+        &__title {
+            text-align: center;  
+            margin-bottom: 50px;          
+        }
+    
+        &__row-top {
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 70px;
+        }
+    
+        .column {
+            text-align: center;
+            flex: 0 0 33%;
+        }
+
+        &__row-bottom {
+            flex-direction: column;
+
+            .column:nth-child(n):nth-child(-n+2) {
+                margin-bottom: 100px;
+            }
+        }
+
+        .column__title {
+            font-size: 26px;
+        }
+
+        .column__subtitle {
+            max-width: 300px;
+        }
+    }
+
+    .about {
+        padding-bottom: 90px;
+
+        &__bottom-row {
+            flex-direction: column-reverse;
+        }
+
+        &__title {
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        &__img {
+            margin: 0 auto 40px;
+            width: 90%;
+            height: 400px;
+        }
+
+        &__description {
+            margin-bottom: 70px;
+        }
+
+        &__column-left {
+            margin-right: 0;
+            text-align: center;
+        }
+
+       
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .title {
+        text-align: center;
+        font-size: $fontSizeMainTitleBlock-768px;
+    }
+
+    .go {
+        padding: 90px 0 60px;
+
+        &__title {
+            font-size: $fontSizeMainTitleBlock-768px;
+        }
+    }
+
+    .header {
+        &__title {
+            font-size: 22px;
+        }
+
+        .burger {
+            width: 30px;
+            height: 21px;
+        }
+    }
+
+    .footer {
+        padding: 70px  15px;
+
+        &__wrapper {
+            max-width: 600px;
+        }
+
+        &__container {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        &__title {
+            font-size: 18px;
+            margin-bottom: 80px;
+        }
+
+        &__nav {
+            margin-bottom: 80px;
+        }
+
+        &__column-left {
+            margin-bottom: 70px;
+        }
+
+        &__form {
+            max-width: 280px;
+            margin: 0 auto;
+        }
+
+
+        &__column-right {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    .team {
+        margin-bottom: 70;
+
+        &__title {
+            font-size: 32px;
+        }
+
+        &__circle {
+            span {
+                width: 170px;
+                height: 170px;
+            }
+        }
+    }  
+    
+    .answer-on-question {
+
+        &__title {
+            font-size: 32px;
+        }
+
+        padding: 0 0px 131px 0;
+
+        .answer__title {
+            font-size: 28px;
+            line-height: 32px;
+        }
+    }
+
+    .franchise {
+        margin-bottom: 90px;
+
+
+        &__input {
+            width: 358px;
+            height: 50px;
+            padding-left: 20px;
+        }
+
+        .franchise__btn {
+            height: 50px;
+            width: 224px;
+        }
+    }
+
+    .ticket {
+        margin-bottom: 70px;
+        &__top {
+            margin-bottom: 80px;
+        }
+    }
+    
+    .autopark {
+        margin-bottom: 70px;
+        padding-top: 70px;
+
+        &__title {
+            margin-bottom: 120px;
+        }
+        
+        .cars {
+            justify-content: center;
+        }
+
+        .car {
+            width: 80%;
+
+            &:nth-child(n):nth-child(-n+3){
+                margin-bottom: 15px;
+            }
+        }
+
+        &__body {
+            margin-bottom: 80px;
+        }
+    }
+
+    .use {
+        padding: 70px 0;
+
+        &__title {
+            width: 100%;
+            padding: 0;
+        }
+
+        &__list {
+            width: 100%;
+        }
+
+        &__item {
+            justify-content: space-between;
+        }
+
+        &__arrow-img {
+            right: 50%;
+            top: 100%;
+            transform: translate(50%, 0);
+        }
+
+        .item__title {
+            font-size: $fontSizeMainTitleBlock-768px;
+            margin: 0 0 25px 0;
+        }
+
+        &__item {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .item__text {
+            text-align: center;
+            max-width: 500px;
+        }
+    }
+
+    .achievement {
+        padding: 70px 0;
+
+        &__row-top {
+            margin-bottom: 40px;
+        }
+
+        .column__title {
+            padding-bottom: 15px;
+        }
+
+        .column__subtitle {
+            max-width: 350px;
+            margin: 0 auto;
+        }
+    }
+
+    .about {
+        padding-bottom: 70px;
+
+        &__description {
+            font-size: 14px;
+        }
+    }
+
+    .intro {
+        margin-bottom: 70px;
+        &__title {
+            font-size: $fontSizeMainTitleBlock-1000px;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    .wrapper {
+        padding: 0 5px;
+    }
+
+    .achievement {
+        .column__title {
+            font-size: 18px;
+        }
+    }
+
+    .title {
+        font-size: $fontSizeMainTitleBlock-480px;
+    }
+
+    .go {
+
+        &__title {
+            font-size: $fontSizeMainTitleBlock-768px;
+        }
+    }
+
+    .circle {
+        width: 180px;
+        height: 180px; 
+    }
+
+    .header {
+        &__title {
+            font-size: 16px;
+        }
+
+        .menu {
+            padding: 90px 0 0 0;
+        }
+
+        .menu__item {
+            text-align: center;
+            font-size: 14px;
+            width: 80%;
+            margin-right: 0;
+            margin: 0 0 15px 0;
+            padding: 15px 20px ;
+        }
+
+        .menu {
+            width: 100%;
+        }
+
+        .menu-right {
+            
+        }
+
+        .menu-left {
+            padding-top: 300px; 
+
+            .menu__item {
+                z-index: 100;
+            }
+        }
+
+
+
+    }
+
+    .footer {
+        &__title {
+            font-size: 18px;
+        }
+
+        &__wrapper {
+            padding: 0 5px;
+        }
+    }
+
+    .team {
+
+        &__input {
+            margin-bottom: 45px;
+            font-size: 16px;
+            
+            &::placeholder {
+                font-size: 16px;
+            }
+        }
+
+        &__title {
+            font-size: 22px;
+            margin-bottom: 40px;
+        }
+
+        &__circle {
+            
+            span {
+                width: 150px;
+                height: 150px;
+                font-size: 16px;
+
+                &:hover {
+                    width: 170px;
+                    height: 170px;
+                }
+            }
+        }
+    }    
+
+    .answer-on-question {
+        padding: 0 0px 90px 0;
+
+        &__title {
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .answer__title {
+            font-size: 18px;
+            line-height: 32px;
+        }
+
+        .answer-list {
+
+            li {
+                padding-left: 26px;
+                font-size: 16px;
+                position: relative;
+            }
+            
+        }
+    }
+
+    .franchise {
+        &__title.title {
+            font-size: 15px;
+        }
+    }
+
+    .ticket { 
+        &__learn-more {
+            width: 146px;
+            height: 146px;
+        }
+
+        &__top {
+            margin-bottom: 40px;
+        }
+    }
+
+    .autopark {
+        &__title {
+            margin-bottom: 90px;
+        }
+
+        &__body {
+            margin-bottom: 60px;
+        }
+
+        .car {
+            width: 95%;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    .use {
+
+        &__title {
+            font-size: 18px;
+        }
+
+        .item__title {
+            font-size: 20px;
+            margin: 0 0 25px 0;
+        }
+
+        .item__text {
+            max-width: 350px;
+        }
+    }
+
+    .intro {
+        &__title {
+            font-size: 22px;
+        }
+    }
+}
